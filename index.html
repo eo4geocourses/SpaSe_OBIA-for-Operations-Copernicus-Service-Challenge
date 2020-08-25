@@ -11,10 +11,21 @@
 <!doctype html>
 <html lang="en" >
 
-	<head>
-		<meta charset="utf-8">
+	<head profile="http://dublincore.org/documents/dcq-html/">
+
+		<link rel="schema.DC"      href="http://purl.org/dc/elements/1.1/" />
+		<link rel="schema.DCTERMS" href="http://purl.org/dc/terms/" />
+		<meta name="DC.format"        scheme="DCTERMS.IMT"      content="text/html" />
+		<meta name="DC.type"          scheme="DCTERMS.DCMIType" content="Text" />
+		<meta name="DC.title"         content="Dublin Core" />
+		<meta name="DC.publisher"     content="Jimmy Wales" />
+		<meta name="DC.subject"       content="Dublin Core Metadaten-Elemente, Anwendungen" />
+		<meta name="DC.creator"       content="Björn G. Kulms" />
+		<meta name="DCTERMS.license"  scheme="DCTERMS.URI" content="http://www.gnu.org/copyleft/fdl.html" />
+		<meta name="DCTERMS.rightsHolder" content="Wikimedia Foundation Inc." />
+		<meta name="DCTERMS.modified" scheme="DCTERMS.W3CDTF" content="2006-03-08" />
 		 
-		<title>eo4geo template for Reveal JS</title>
+		<title>eo4geo Urban Heat Islands</title>
 
 		<link rel="stylesheet" href="internal_restricted/v1.0/css/reveal.css">
 		<!-- CHOOSE BETWEEN 2 EO4GEO TEMPLATE THEMES:-->
@@ -25,7 +36,18 @@
 		<link href='https://fonts.googleapis.com/css?family=Roboto Slab' rel='stylesheet'> 
 		<link rel="stylesheet" href="partnerLogo.css" id="theme"> 
 		<link rel="stylesheet" href="customer_content/css/eo4geo_override.css" id="theme">
-
+		
+		<!--<link rel="stylesheet" media="print" href="reveal.js/css/print/pdf.css" />-->
+		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+		<script>
+		  if( window.location.search.match( /print-pdf/gi ) ) {
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = 'internal_restricted/v1.0/css/print/pdf.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		  }
+		</script>
 		<base target="_blank"> <!-- All links in the presentation are opened in a seperate tab"-->
 
 	</head>
@@ -44,17 +66,15 @@
 				 
 			
 
-			<!-- AUTHORS: DEFINE METADATA FOR WHOLE SLIDESET HERE: (Dublin Core Metadata format, complemented by BoK-Concepts) >
+			<!-- AUTHORS: DEFINE METADATA FOR WHOLE SLIDESET HERE: (Dublin Core Metadata format, complemented by BoK-Concepts)>
 				@prefix dc: <http://purl.org/dc/terms/>.
 				@prefix eo4geo: <http://bok.eo4geo.eu/>.
-				<>  	dc:title "Urban Heat Islands";
+				<> dc:title "Urban Heat Islands";
 					dc:creator "Veronika Krieger, Spatial Services GmbH";
 					dc:subject "EO4GEO, WP5, Satellite, Earth Observation, Climate";
 					dc:abstract "This slideset is a tutorial for a basic analysis of urban heat islands. Within the tutorial SNAP, QGIS and eCognition are used. ";
-					dc:tableOfContents "(1) Background; (2) Download of Data; (3) Pre-Processing; 
-						(4) Analysis;";
-					dc:description "Learning outcomes: Interpret EO-derived temperature maps; Identify local heat islands; See how different land cover affects temperature; Understand how urban-scale weather/climate information may be 
-usefully employed at urban management;";
+					dc:tableOfContents "(1) Background; (2) Download of Data; (3) Pre-Processing; (4) Analysis;";
+					dc:description "Learning outcomes: Interpret EO-derived temperature maps; Identify local heat islands; See how different land cover affects temperature; Understand how urban-scale weather/climate information may be usefully employed at urban management;";
 					dc:contributor "Zahra Dabiri, Sara Wimann";
 					dc:created "2020-07-21";
 					dc:type "Tutorial";
@@ -67,9 +87,35 @@ usefully employed at urban management;";
 					dc:rightsHolder "Veronika Krieger, Spatial Services GmbH";
 					dc:license "CC BY-SA 4.0";
 					dc:relation eo4geo:TA11-5;
+					dc:relation eo4geo:TA11-5-1;
+					dc:relation eo4geo:TA11-5-2;
 					dc:relation eo4geo:TA11-7;
-					dc:relation eo4geo:TA12.	
-								-->
+					dc:relation eo4geo:TA11-7-1;
+					dc:relation eo4geo:TA11-7-2;
+					dc:relation eo4geo:TA11-7-3;
+					dc:relation eo4geo:TA12;
+					dc:relation eo4geo:TA12-1;
+					dc:relation eo4geo:TA12-6;
+					dc:relation eo4geo:TA12-7;
+					dc:relation eo4geo:TA12-10;
+					dc:relation eo4geo:TA13-1;
+					dc:relation eo4geo:TA13-1-1;
+					dc:relation eo4geo:TA13-1-2;
+					dc:relation eo4geo:TA13-5;
+					dc:relation eo4geo:TA13-5-1;
+					dc:relation eo4geo:IP3-4;
+					dc:relation eo4geo:IP3-5;
+					dc:relation eo4geo:IP6;
+					dc:relation eo4geo:PS1-5-3;
+					dc:relation eo4geo:PS4;
+					dc:relation eo4geo:GD1;
+					dc:relation eo4geo:GD6-3;
+					dc:relation eo4geo:GD11-1;
+					dc:relation eo4geo:GD11-2;
+					dc:relation eo4geo:CV6-2;
+					dc:relation eo4geo:AM5;
+					.	-->
+								
 
 
 				<div class="slides">
@@ -262,7 +308,7 @@ usefully employed at urban management;";
 						<p style ="text-align:left;"> We want to access the data via the Copernicus Open Access Hub. Go to <a href="https://scihub.copernicus.eu/"> https://scihub.copernicus.eu/ </a>
 						</p>
 						<div style="display:flex;align-items:flex-end;">
-							<p style="float: left;"><img  style="background-color:#293133; box-shadow: none;min-width:700px;" data-src="http://eo4geo.sbg.ac.at/SPASE/pic1a.png" alt="cop_open_access1"> </p>
+							<p style="float: left;"><img  style="background-color:#293133; box-shadow: none;width: auto; height:auto;min-width:700px;" data-src="http://eo4geo.sbg.ac.at/SPASE/pic1a.png" alt="cop_open_access1"> </p>
 							<p style ="text-align:left;padding-left:1em;padding-bottom: 1.5em;font-size:15px"> Sentinel-1 to Sentinel-3 data can be found in the Open Hub.</p>
 						</div>
 					</section>
