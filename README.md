@@ -1,7 +1,7 @@
 # Urban heat islands
 
 Slides: 
-https://eo4geocourses.github.io/SpaSe_OBIA-for-Operations-Copernicus-Service-Challenge-Practical-Example/
+https://eo4geocourses.github.io/SpaSe_Urban-Heat-Islands/
 
 Abstract: 
 This slideset is a tutorial for a basic analysis of urban heat islands. Within the tutorial SNAP, QGIS and eCognition are used.
