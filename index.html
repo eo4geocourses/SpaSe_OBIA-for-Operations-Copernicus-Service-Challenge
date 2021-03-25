@@ -231,7 +231,7 @@
 						The study […] found these differences in city patterns, which they call "texture," was the most important determinant 
 						of a city's heat island effect.” </i></p>
 						<br>
-						<p style ="text-align:right; font-size:15px">(Urban heat island effects depend on a city's layout, <a href="https://phys.org/news/2018-02-urban-island-effects-city-layout.html)"> https://phys.org/news/2018-02-urban-island-effects-city-layout.html </a></p>
+						<p style ="text-align:right; font-size:15px">(Urban heat island effects depend on a city's layout, <a href="https://phys.org/news/2018-02-urban-island-effects-city-layout.html"> https://phys.org/news/2018-02-urban-island-effects-city-layout.html </a></p>
 					</section>
 					
 				</section>
@@ -257,12 +257,12 @@
 					<section >
 						<h2 style="text-align:left"> How to analyse urban heat islands?</h2> 
 						<br>
-						<p style ="text-align:left;">To detect UHIs we are going to use the land surface temperature (LST). Be aware that 
+						<p style ="text-align:left;">Detecting UHIs is done by using the land surface temperature (LST). Be aware that 
 						this is equal to the air temperature that people will experience in that place. However, it a good and easy-to-access indicator.<br><br>
-						We are going to use data from Sentinel-3, which has thermal bands included and thus 
+						Data from Sentinel-3 will be used, which has thermal bands included and thus 
 						provides LST. Another alternative would be Landsat-8 which has a higher resolution 
-						(Sentinel-3: 300m, Landsat-8: 100m (resampled to 30m)). At the moment, there are two 
-						identical satellites Sentinel-3A and Sentinel-3B. It doesn’t matter which one we use.</p>
+						- Sentinel-3: 300m, Landsat-8: 100m (resampled to 30m). At the moment, there are two 
+						satellites, Sentinel-3A and Sentinel-3B, which have the same resolution.</p>
 						
 					</section>		
 				</section>
@@ -272,7 +272,7 @@
 						<h2 style="text-align:left"> And now... Hands on!</h2> 
 						<br>	
 						<div style ="text-align:left;">
-						During this hands-on session we do the following steps:<br><br>
+						During this hands-on session following steps will be done:<br><br>
 						<ul>
 							<li>Download the image from Copernicus Open Access Hub</li>
 							<li>Pre-process it in SNAP and QGIS</li>
@@ -288,7 +288,7 @@
 					<section >
 						<h2 style="text-align:left"> Download Satellite Image</h2> 
 						
-						<p style ="text-align:left;"> We want to access the data via the Copernicus Open Access Hub. Go to <a href="https://scihub.copernicus.eu/"> https://scihub.copernicus.eu/ </a>
+						<p style ="text-align:left;"> Access the data via the Copernicus Open Access Hub. Go to <a href="https://scihub.copernicus.eu/"> https://scihub.copernicus.eu/ </a>
 						</p>
 						<div style="display:flex;align-items:flex-end;">
 							<p style="float: left;"><img  style="background-color:#293133; box-shadow: none;width: auto; height:auto;min-width:700px;" data-src="http://eo4geo.sbg.ac.at/SPASE/pic1a.png" alt="cop_open_access1"> </p>
@@ -309,11 +309,11 @@
 					<section >
 						<h2 style="text-align:left"> Download Satellite Image</h2> 
 						
-						<p style ="text-align:left;"> Mark region around Salzburg by switching to Navigation mode. To look for an appropriate image we use the Filter. You can access it by clicking the filter symbol next to the search bar.
+						<p style ="text-align:left;"> Mark the region around Salzburg by switching to Navigation mode. To look for an appropriate image, use the Filter. You can access it by clicking the filter symbol next to the search bar.
 						</p>
 						<div style="display:flex;align-items:flex-end;">
 							<p style="float: left;"><img  style="background-color:#293133; box-shadow: none;min-width:700px;" data-src="http://eo4geo.sbg.ac.at/SPASE/pic3a.png" alt="cop_open_access3"> </p>
-							<p style ="text-align:left;padding-left:1em;padding-bottom: 1.5em; font-size:15px"> To get rid of influence of clouds, it would be better to get maximum land surface temperature over a season, but this would be out of scope of this tutorial. So, we only use one image with little cloud coverage. <br>
+							<p style ="text-align:left;padding-left:1em;padding-bottom: 1.5em; font-size:15px"> To get rid of influence of clouds, it is better to get maximum land surface temperature over a season, but this would be out of scope of this tutorial. So, only use one image with little cloud coverage. <br>
 							Filter settings:<br>
 							Sensing period: 12.04.2020 to 12.04.2020<br>
 							Mission: Sentinel-3<br>
@@ -337,15 +337,15 @@
 					<section>
 						<h2 style="text-align:left"> Pre-process Image</h2> 
 						
-						<p style ="text-align:left;"> For pre-processing the Sentinel-3 product we are using Sentinel Application Platform (SNAP) and QGIS<br><br>
+						<p style ="text-align:left;"> For pre-processing the Sentinel-3 product use the Sentinel Application Platform (SNAP) and QGIS<br><br>
 						Download Sentinel Application Platform SNAP, if not already installed:<br>
 						<br>
 						<a style ="font-size:30px" href="https://step.esa.int/main/download/snap-download/"> https://step.esa.int/main/download/snap-download/</a><br>
-						<small>(We are using only the Sentinel Toolboxes)</small><br>
+						<small>(Use only the Sentinel Toolboxes)</small><br>
 						<br>
 						Same for QGIS:<br>
 						<br>
-						<a style ="font-size:30px" href="https://step.esa.int/main/download/snap-download/"> https://step.esa.int/main/download/snap-download/</a>
+						<a style ="font-size:30px" href="https://qgis.org/en/site/forusers/download.html"> https://qgis.org/en/site/forusers/download.html</a>
 						</p>
 					</section>
 					
@@ -363,7 +363,7 @@
 					<section>
 						<h2 style="text-align:left"> Pre-process Image - SNAP</h2> 
 						
-						<p style ="text-align:left;"> First, we want to select the area around Salzburg to further investigate it.
+						<p style ="text-align:left;"> First, select the area around Salzburg to further investigate it.
 						</p>
 						<div style="display:flex;align-items:flex-end;">
 							<p style="float: left;"><img  style="background-color:#293133; box-shadow: none;min-width:200px;max-width:400px" data-src="http://eo4geo.sbg.ac.at/SPASE/pic6.png" alt="pre-proc2"> </p>
@@ -373,16 +373,15 @@
 							South latitude bound: 46.5<br>
 							East longitude bound: 14.0</b><br>
 							<br>
-							In the <b>Band Subset</b> tab only choose <b>LST, x_in, y_in, latitude_in, and longitude_in</b>.<br>
-							<br>
-							Click <i>OK</i>, then click <i>No</i> in the pop-up window (no flag dataset subset).</p>
+							In the <b>Band Subset</b> tab only choose <b>LST, x_in, y_in, latitude_in, and longitude_in</b>. Click OK, then click No in the pop-up window (no flag dataset subset).<br>
+							</p>
 						</div>
 					</section>
 					
 					<section>
 						<h2 style="text-align:left"> Pre-process Image - SNAP</h2> 
 						
-						<p style ="text-align:left;"> Visualize the LST Band in the subset. You now can see the region around Salzburg. For further processing we need to reproject the Sentinel-3 product. 
+						<p style ="text-align:left;"> Visualize the LST Band in the subset. You now can see the region around Salzburg. For further processing, reproject the Sentinel-3 product. 
 						</p>
 						<div style="display:flex;align-items:flex-end;">
 							<p style="float: left;"><img  style="background-color:#293133; box-shadow: none;min-width:200px;max-width:350px" data-src="http://eo4geo.sbg.ac.at/SPASE/pic7.png" alt="pre-proc3"> </p>
@@ -397,7 +396,7 @@
 					<section>
 						<h2 style="text-align:left"> Pre-process Image - SNAP</h2> 
 						
-						<p style ="text-align:left;">If you visualise the projection you’ll see distortions at the egdes. To get rid of them, we will do another subset.
+						<p style ="text-align:left;">If you visualise the projection you’ll see distortions at the egdes. To get rid of them, do another subset.
 						</p>
 						<div style="display:flex;align-items:flex-end;">
 							<p style="float: left;"><img  style="background-color:#293133; box-shadow: none;min-width:700px;max-width:750px" data-src="http://eo4geo.sbg.ac.at/SPASE/pic9.png" alt="pre-proc5"> </p>
@@ -413,7 +412,7 @@
 					<section>
 						<h2 style="text-align:left"> Pre-process Image - SNAP</h2> 
 						
-						<p style ="text-align:left;">We can apply a colour map. 
+						<p style ="text-align:left;">Apply a colour map. 
 						</p>
 						<div style="display:flex;align-items:flex-end;">
 							<p style="float: left;"><img  style="background-color:#293133; box-shadow: none;min-width:700px;max-width:750px" data-src="http://eo4geo.sbg.ac.at/SPASE/pic10.png" alt="pre-proc6"> </p>
@@ -427,7 +426,7 @@
 					<section>
 						<h2 style="text-align:left"> Pre-process Image - SNAP</h2> 
 						
-						<p style ="text-align:left;"> Now, we export the LST Band to GeoTIFF. 
+						<p style ="text-align:left;"> Now, export the LST Band to GeoTIFF. 
 						</p>
 						<div style="display:flex;align-items:flex-end;">
 							<p style="float: left;"><img  style="background-color:#293133; box-shadow: none;min-width:200px;max-width:350px" data-src="http://eo4geo.sbg.ac.at/SPASE/pic11.png" alt="pre-proc7"> </p>
@@ -441,13 +440,13 @@
 					<section>
 						<h2 style="text-align:left"> Pre-process Image - QGIS</h2> 
 						
-						<p style ="text-align:left;">Open a new Project, choose a base map, and open the raster file, we have just exported from SNAP.  
+						<p style ="text-align:left;">Open a new Project, choose a base map and open the raster file which is exported from SNAP.  
 						</p>
 						<div style="display:flex;align-items:flex-end;">
 							<p style="float: left;"><img  style="background-color:#293133; box-shadow: none;min-width:700px;max-width:750px" data-src="http://eo4geo.sbg.ac.at/SPASE/pic13.png" alt="pre-proc9"> </p>
 							<p style ="text-align:left;padding-left:1em;padding-bottom: 1.5em; font-size:15px"> In the menu bar select:<br>
 							<b>Layer>Add layer>Add raster layer</b><br>
-							Open the <b>S3A_LST_20200412T091345.tif</b> that we have just exported from SNAP.</p>
+							Open the <b>S3A_LST_20200412T091345.tif</b> that is exported from SNAP.</p>
 						</div>
 					</section>
 					
@@ -459,21 +458,21 @@
 						<div style="display:flex;align-items:flex-end;">
 							<p style="float: left;"><img  style="background-color:#293133; box-shadow: none;min-width:350px;max-width:400px" data-src="http://eo4geo.sbg.ac.at/SPASE/pic14.png" alt="pre-proc10"> </p>
 							<p style ="text-align:left;padding-left:1em;padding-bottom: 1.5em; font-size:15px"> Select the Render type <b>Paletted/Unique values</b>, and an appropriate colour ramp for temperature.<br><br>
-							We now can already see warmer and colder parts. Cold areas often are caused by mountains (where high elevation leads to lower temperatures), but as well the impact of lakes can be seen. Looking on the warm spots, we already might guess the location of Salzburg </p>
+							Warmer and colder parts are shown. Cold areas often are caused by mountains (where high elevation leads to lower temperatures), but as well the impact of lakes can be seen. </p>
 						</div>
 					</section>
 					
 					<section>
 						<h2 style="text-align:left"> Pre-process Image - QGIS</h2> 
 						
-						<p style ="text-align:left;">Again, we want to clip the file to a specific region. Therefore, we need the outline of Salzburg an its Surrounding.
+						<p style ="text-align:left;">Again, clip the file to a specific region. Therefore, the outline of Salzburg an its surrounding is needed. Looking on the red spots, the location of Salzburg can be already seen.
 						</p>
 						<div style="display:flex;align-items:flex-end;">
 							<p style="float: left;"><img  style="background-color:#293133; box-shadow: none;min-width:700px;max-width:750px" data-src="http://eo4geo.sbg.ac.at/SPASE/pic15.png" alt="pre-proc11"> </p>
 							<p style ="text-align:left;padding-left:1em;padding-bottom: 1.5em; font-size:15px"> <b>Layer>Add layer> Add vector layer </b><br><br>
-							Choose <b>Salzburg(S_SL_HA)_Area.shp</b> that is available from the Download section of this Tutorial. <br><br>
+							Choose <b>Salzburg(S_SL_HA)_Area.shp</b> which is available from the Download section of this Tutorial. <br><br>
 							Select the coordinate system <b>Inverse of Austria Lambert + MGI to WGS 84 (3) + Popular Visualisation Pseudo-Mercator</b> in the popup window.<br><br>
-							Finally, change the style to outline (Right click shape <b>Properties>Symbology</b>).</p>
+							Finally, change the style to outline (Right click the shape <b>Properties>Symbology</b>).</p>
 						</div>
 					</section>
 					
@@ -485,8 +484,8 @@
 						<div style="display:flex;align-items:flex-end;">
 							<p style="float: left;"><img  style="background-color:#293133; box-shadow: none;min-width:350px;max-width:400px" data-src="http://eo4geo.sbg.ac.at/SPASE/pic16.png" alt="pre-proc12"> </p>
 							<p style="float: left;"><img  style="background-color:#293133; box-shadow: none;min-width:350px;max-width:400px" data-src="http://eo4geo.sbg.ac.at/SPASE/pic17.png" alt="pre-proc13"> </p>
-							<p style ="text-align:left;padding-left:1em;padding-bottom: 1.5em; font-size:15px"> Make sure to select the right layers as Input layer and as Mask layer.<br>
-							Check<b>Keep resolution of input raster</b>.</p>
+							<p style ="text-align:left;padding-left:1em;padding-bottom: 1.5em; font-size:15px"> Make sure to select the right layers as Input and as Mask.<br>
+							<b> Keep resolution of input raster</b>.</p>
 						</div>
 					</section>
 					
@@ -497,14 +496,14 @@
 						</p>
 						<div style="display:flex;align-items:flex-end;">
 							<p style="float: left;"><img  style="background-color:#293133; box-shadow: none;min-width:700px;max-width:750px" data-src="http://eo4geo.sbg.ac.at/SPASE/pic18.png" alt="pre-proc14"> </p>
-							<p style ="text-align:left;padding-left:1em;padding-bottom: 1.5em; font-size:15px"> We have to change some more things here…</p>
+							<p style ="text-align:left;padding-left:1em;padding-bottom: 1.5em; font-size:15px"> Some more things have to be changed…</p>
 						</div>
 					</section>
 					
 					<section>
 						<h2 style="text-align:left"> Pre-process Image - QGIS</h2> 
 						
-						<p style ="text-align:left;">Copy the style from raster layer (<b>Right click>Styles>Copy Style</b>) to clipped layer (<b>Right click>Styles>paste style</b>).
+						<p style ="text-align:left;">Copy the style from raster layer (<b>Right click>Styles>Copy style</b>) to clipped layer (<b>Right click>Styles>Paste style</b>).
 						</p>
 						<div style="display:flex;align-items:flex-end;">
 							<p style="float: left;"><img  style="background-color:#293133; box-shadow: none;min-width:700px;max-width:750px" data-src="http://eo4geo.sbg.ac.at/SPASE/pic19.png" alt="pre-proc15"> </p>
@@ -515,13 +514,13 @@
 					<section>
 						<h2 style="text-align:left"> Pre-process Image - QGIS</h2> 
 						
-						<p style ="text-align:left;">Now, we are ready to do some classification with eCognition. <br><br>
-						So, we have to export a GeoTIFFs by selecting the clipped raster file. <br><br>
+						<p style ="text-align:left;">Now, do some classification with eCognition. <br><br>
+						Export a GeoTIFFs by selecting the clipped raster file. <br><br>
 						<b>Right click>Export>Save as… </b><br><br>
 						In the popup window specify:<br>
-						<b>Output mode: Raw data<br>
-						Name: S3A_LST_20200412T091345_clipped<br><br>
-						DON’T FORGET TO SAVE YOU QGIS PROJECT!</b>
+						Output mode: <b>Raw data</b><br>
+						Name: <b>S3A_LST_20200412T091345_clipped.tiff</b><br><br>
+						<b>Don´t forget to SAVE your QGIS project!</b>
 						</p>
 					</section>
 				</section>
@@ -539,7 +538,7 @@
 					<section>
 						<h2 style="text-align:left"> Analysis - eCognition</h2> 
 						
-						<p style ="text-align:left;">Now, we want to do a segmentation. Therefore, in the <b>Process Tree</b> right click and open <b>Append new</b>.
+						<p style ="text-align:left;">Now, do a segmentation. Therefore, in the <b>Process Tree</b> right click and open <b>Append new</b>.
 						</p>
 						<div style="display:flex;align-items:flex-end;">
 							<p style="float: left;"><img  style="background-color:#293133; box-shadow: none;min-width:700px;max-width:750px" data-src="http://eo4geo.sbg.ac.at/SPASE/pic21.png" alt="analysis2"> </p>
@@ -559,7 +558,7 @@
 					<section>
 						<h2 style="text-align:left"> Analysis - eCognition</h2> 
 						
-						<p style ="text-align:left;">Finally, we export the result in a vector layer, including the mean temperature for each segment.
+						<p style ="text-align:left;">Finally, export the result in a vector layer, including the mean temperature for each segment.
 						</p>
 						<div style="display:flex;align-items:flex-end;">
 							<p style="float: left;"><img  style="background-color:#293133; box-shadow: none;min-width:650px;max-width:700px" data-src="http://eo4geo.sbg.ac.at/SPASE/pic23.png" alt="analysis3"> </p>
@@ -577,7 +576,7 @@
 					<section>
 						<h2 style="text-align:left"> Analysis - QGIS</h2> 
 						
-						<p style ="text-align:left;">Now, we again add the vector file to a QGIS layer (<b>Layer>Add layer>Add vector layer</b>).
+						<p style ="text-align:left;">Again, add the vector file to a QGIS layer (<b>Layer>Add layer>Add vector layer</b>).
 						</p>
 						<div style="display:flex;align-items:flex-end;">
 							<p style="float: left;"><img  style="background-color:#293133; box-shadow: none;min-width:700px;max-width:750px" data-src="http://eo4geo.sbg.ac.at/SPASE/pic24.png" alt="analysis4"> </p>
@@ -601,13 +600,14 @@
 						</p>
 						<div style="display:flex;align-items:flex-end;">
 							<p style="float: left;"><img  style="background-color:#293133; box-shadow: none;min-width:450px;max-width:550px" data-src="http://eo4geo.sbg.ac.at/SPASE/pic26.png" alt="analysis6"> </p>
-							<p style ="text-align:left;padding-left:1em;padding-bottom: 1.5em; font-size:15px"> In the <b>Process Tree</b> right click and open <b>Append new<br><br>
+							<p style ="text-align:left;padding-left:1em;padding-bottom: 1.5em; font-size:15px"> In the <b>Process Tree</b> click right and open <b>Append new<br><br>
 							Settings:<br>
 							Graduated<br>
 							Symbol: make the colour transparent<br>
 							Precision: 1<br>
 							Mode: Natural breaks (Jenks)<br>
-							Classes: 5</b></p>
+							Classes: 5</b>
+							Adjust Values<br></p>
 						</div>
 					</section>
 					
@@ -628,8 +628,8 @@
 						</p>
 						<div style="display:flex;align-items:flex-end;">
 							<p style="float: left;"><img  style="background-color:#293133; box-shadow: none;min-width:450px;max-width:550px" data-src="http://eo4geo.sbg.ac.at/SPASE/pic28.png" alt="analysis8"> </p>
-							<div style ="text-align:left;padding-left:1em;padding-bottom: 3px; font-size:15px"> Adding the outline of the city of Salzburg, we can see that it matches very well with the UHI. Except from the southern part of the city…Why?<br><br>
-							Knowing Salzburg, or looking at the natural colour satellite image, we can see that there are way more green areas in the south.
+							<div style ="text-align:left;padding-left:1em;padding-bottom: 3px; font-size:15px"> Adding the outline of the city of Salzburg - it matches very well with the UHI. Except from the southern part of the city… Why?<br><br>
+							Knowing Salzburg, or looking at the natural colour satellite image, there are way more green areas in the south.
 								<p style="float: middle;"><img  style="background-color:#293133; box-shadow: none;min-width:250px;max-width:300px" data-src="http://eo4geo.sbg.ac.at/SPASE/pic29.png" alt="analysis9"> </p>
 							</div>
 						</div>
@@ -640,7 +640,7 @@
 					<section>
 						<h2 style="text-align:left"> More detailed Analyses</h2> 
 						
-						<p style ="text-align:left;">The analysis we did is good to see the impact of different land cover on land surface temperature. However, urban planners are interested as well in heat islands within the city. In the following pages, we see a more detailed analysis that was done with Landsat-8 data and the Google Earth Engine. 
+						<p style ="text-align:left;">The analysis shows the impact of different land cover on land surface temperature. However, urban planners are interested as well in heat islands within the city. In the following pages, you can see a more detailed analysis that was done with Landsat-8 data and the Google Earth Engine. 
 						</p>
 						<div style="display:flex;align-items:flex-end;">
 							<div style="float: left;"><img  style="background-color:#293133; box-shadow: none;min-width:400px;max-width:470px; margin-bottom:0px" data-src="http://eo4geo.sbg.ac.at/SPASE/pic30.png" alt="analysis10"> </div>
